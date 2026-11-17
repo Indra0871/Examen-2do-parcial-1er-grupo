@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Starbucks - Inicio</title>
+</head>
+
+<body bgcolor="#F5F5F0" text="#1E3932">
+
+    <!-- ENCABEZADO: Logo y nombre de Starbucks -->
+    <table width="100%" bgcolor="#1E3932" cellpadding="10">
+        <tr>
+            <td width="20%" align="center">
+                <img src="logo.png" width="100" height="100">
+            </td>
+
+            <td align="left">
+                <font color="white" size="6">
+                    STARBUCKS
+                </font>
+                <br>
+                <font color="#D4E9E2" size="3">
+                    Disfruta tu momento favorito
+                </font>
+            </td>
+        </tr>
+    </table>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <table width="100%" bgcolor="#D4E9E2" cellpadding="12">
+        <tr align="center">
+            <td><a href="index.html">Inicio</a></td>
+            <td><a href="menu.html">Menú</a></td>
+        </tr>
+    </table>
+
+    <!-- CUERPO: Presentación de Starbucks -->
+    <center>
+
+        <h1>Bienvenido a Starbucks</h1>
+
+        <h3>Disfruta tu bebida favorita</h3>
+
+        <p>
+            Conoce nuestras bebidas y disfruta de una gran
+            variedad de sabores.
+        </p>
+
+        <!-- Promoción de temporada -->
+        <h2>Promoción de temporada</h2>
+
+        <p>
+            Visítanos y descubre nuestras bebidas especiales
+            de temporada.
+        </p>
+
+        <img src="promocion.jpg" width="350" height="220">
+
+        <br><br>
+
+        <a href="menu.html">Conoce nuestro menú</a>
+
+    </center>
+
+    <hr>
+
+    <!-- REGISTRO DE CLIENTES -->
+    <center>
+
+        <h2>Registro de clientes</h2>
+
+        <form onsubmit="registrar(event)">
+
+            <!-- Campo para el nombre -->
+            Nombre:
+            <input type="text" id="nombre" required>
+            <br><br>
+
+            <!-- Campo para el correo -->
+            Correo:
+            <input type="email" id="correo" required>
+            <br><br>
+
+            <!-- Campo para la contraseña -->
+            Contraseña:
+            <input type="password" id="password" required>
+            <br><br>
+
+            <!-- Botones del formulario -->
+            <input type="submit" value="Registrarse">
+            <input type="reset" value="Borrar">
+
+        </form>
+
+        <!-- Mensaje de bienvenida -->
+        <h3 id="mensaje"></h3>
+
+    </center>
+
+    <!-- FOOTER: Información del alumno -->
+    <br>
+
+    <table width="100%" bgcolor="#1E3932" cellpadding="15">
+        <tr>
+            <td align="center">
+                <font color="white">
+                    <h3>STARBUCKS</h3>
+                    Alumno: Martinez Ortiz Indra Jezabel
+                    <br>
+                    Grupo: 5-J
+                    <br>
+                    Numero de control:24308051280871
+                </font>
+            </td>
+        </tr>
+    </table>
+
+    <!-- JAVASCRIPT: Funcionamiento del registro -->
+    <script>
+
+        // Función para registrar al cliente
+        function registrar(event) {
+
+            // Evita que se recargue la página
+            event.preventDefault();
+
+            // Obtiene el nombre ingresado
+            var nombre = document.getElementById("nombre").value;
+
+            // Guarda el nombre durante la sesión
+            sessionStorage.setItem("usuario", nombre);
+
+            // Muestra el mensaje de bienvenida
+            document.getElementById("mensaje").innerHTML =
+                "Bienvenido, " + nombre;
+
+        }
+
+    </script>
+
+</body>
+</html>

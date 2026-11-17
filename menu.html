@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Starbucks - Menú</title>
+</head>
+
+<body bgcolor="#F5F5F0" text="#1E3932">
+
+    <!-- ENCABEZADO: Logo y nombre -->
+    <table width="100%" bgcolor="#1E3932" cellpadding="10">
+        <tr>
+            <td width="20%" align="center">
+                <img src="logo.png" width="100" height="100">
+            </td>
+
+            <td align="left">
+                <font color="white" size="6">
+                    STARBUCKS
+                </font>
+                <br>
+                <font color="#D4E9E2" size="3">
+                    Disfruta tu momento favorito
+                </font>
+            </td>
+        </tr>
+    </table>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <table width="100%" bgcolor="#D4E9E2" cellpadding="12">
+        <tr align="center">
+            <td><a href="index.html">Inicio</a></td>
+            <td><a href="menu.html">Menú</a></td>
+        </tr>
+    </table>
+
+    <!-- TÍTULO DEL MENÚ -->
+    <center>
+        <h1>Nuestro menú</h1>
+
+        <p>
+            Conoce nuestras diferentes categorías de bebidas.
+        </p>
+    </center>
+
+    <!-- PRIMERA FILA DE BEBIDAS -->
+    <table width="100%" cellpadding="15">
+
+        <tr align="center">
+
+            <!-- Bebidas calientes -->
+            <td>
+                <h3>Bebidas calientes</h3>
+                <img src="calientes.jpg" width="180" height="180">
+                <p>Disfruta de nuestras bebidas calientes.</p>
+            </td>
+
+            <!-- Frappuccino -->
+            <td>
+                <h3>Frappuccino</h3>
+                <img src="frappuccino.jpg" width="180" height="180">
+                <p>Bebidas frías y cremosas.</p>
+            </td>
+
+            <!-- Bebidas frías -->
+            <td>
+                <h3>Bebidas frías</h3>
+                <img src="frias.jpg" width="180" height="180">
+                <p>Opciones refrescantes para disfrutar.</p>
+            </td>
+
+        </tr>
+
+        <!-- SEGUNDA FILA DE BEBIDAS -->
+        <tr align="center">
+
+            <!-- Bebidas base té -->
+            <td>
+                <h3>Bebidas base té</h3>
+                <img src="te.jpg" width="180" height="180">
+                <p>Deliciosas bebidas preparadas con té.</p>
+            </td>
+
+            <!-- Cold Brew -->
+            <td>
+                <h3>Cold Brew</h3>
+                <img src="coldbrew.jpg" width="180" height="180">
+                <p>Café preparado en frío.</p>
+            </td>
+
+        </tr>
+
+    </table>
+
+    <!-- FOOTER: Información del alumno -->
+    <table width="100%" bgcolor="#1E3932" cellpadding="15">
+        <tr>
+            <td align="center">
+                <font color="white">
+                    <h3>STARBUCKS</h3>
+                    Alumno: Martinez Ortiz Indra Jezabel
+                    <br>
+                    Grupo: 5-J
+                    <br>
+                    Numero de control:24308051280871
+                </font>
+            </td>
+        </tr>
+    </table>
+
+    <!-- JAVASCRIPT: Muestra el nombre del usuario registrado -->
+    <script>
+
+        // Obtiene el nombre guardado durante el registro
+        var usuario = sessionStorage.getItem("usuario");
+
+        // Si existe un usuario, muestra su nombre
+        if (usuario) {
+
+            document.write(
+                "<center><h3>Bienvenido, " + usuario + "</h3></center>"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
